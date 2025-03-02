@@ -1,0 +1,196 @@
+/* Container */
+.register-container {
+  max-width: 90%;
+  width: 800px;
+  margin: 70px 250px 90px 350px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  color: #222;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Form Groups */
+.form-group {
+  width: 100%;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 17px;
+}
+
+/* Input Fields & Select Dropdown */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Radio Buttons */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.radio-group input {
+  width: auto;
+  margin-right: 5px;
+}
+
+/* Fixing Alignment of Labels */
+.radio-group label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ensure Checkbox and Label Align */
+.checkbox-group input {
+  width: auto;
+  margin: 0;
+}
+
+.checkbox-group label {
+  font-size: 16px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #28a745;
+  color: white;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Error Messages */
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Image Preview */
+.preview-img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-container {
+      width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .form {
+      max-width: 100%;
+  }
+
+  input,
+  select {
+      font-size: 13px;
+  }
+
+  .submit-btn {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+      width: 95%;
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  label {
+      font-size: 15px;
+  }
+
+  input,
+  select {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .submit-btn {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  .radio-group {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .checkbox-group {
+      flex-direction: row;
+      align-items: center;
+  }
+}

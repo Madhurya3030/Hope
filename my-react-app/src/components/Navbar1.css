@@ -1,0 +1,89 @@
+/* Make the header full-width */
+.header {
+    width: 1450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps logo left, nav center, button right */
+    padding: 20px 50px; /* Adds space on the sides */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+/* Logo stays on the left */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation stays in the center */
+.nav {
+    display: flex;
+    gap: 30px; /* Adds space between menu items */
+    align-items: center;
+}
+
+/* Style for nav links */
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ff6b6b;
+}
+
+/* Donate Button stays on the right */
+.donate-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #e35b5b;
+}
+
+/* Prevent body content from going under the fixed header */
+body {
+    padding-top: 80px; /* Adjust depending on header height */
+}
+.button-container {
+    display: flex;
+    gap: 15px; /* Adds space between buttons */
+}
+.Login {
+    background-color: white;
+    color: #333;
+    border: 2px solid #e35b5b;
+}
+
+.Login:hover {
+    background-color: #e35b5b;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Signup Button */
+.Register {
+    background-color: #e35b5b; /* Light green */
+    color: white;
+}
+
+.Register {
+    background-color: #e35b5b;
+    transform: scale(1.05);
+}

@@ -1,0 +1,52 @@
+.carousel-container {
+    width: 15250x; /* Make it full-width */
+    max-width: 99vw; /* Ensure it stretches across the viewport */
+    margin: 0 auto; /* Center align */
+    overflow: hidden;
+}
+
+/* Ensure images take up the full width */
+.slide img {
+    width: 99vw; /* Full width of the viewport */
+    height: 70vh; /* Full height of the viewport */
+    object-fit: cover; /* Cover the entire space */
+}
+
+/* Fix for hidden carousel */
+.slick-slider {
+    display: block !important;
+}
+
+/* Customizing dots */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #333;
+}
+
+/* Customizing arrows */
+.slick-prev, .slick-next {
+    z-index: 100;
+    color: #fff;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px; /* Bigger arrows */
+    color: #333;
+    opacity: 1;
+}
+
+.slick-prev {
+    left: 0px; /* Position the left arrow */
+}
+
+.slick-next {
+    right: 20px; /* Position the right arrow */
+}
