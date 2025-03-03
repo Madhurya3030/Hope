@@ -13,3 +13,4 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("reg", userSchema);
+ 

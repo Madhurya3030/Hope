@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Reportcase.css";
+import axios from "axios";
+
 
 const Reportcase = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +38,7 @@ const Reportcase = () => {
       setFormData({ ...formData, photo: file });
       setPreview(URL.createObjectURL(file));
     }
-  };
+  }; 
 
   const validate = () => {
     let newErrors = {};
@@ -57,8 +59,16 @@ const Reportcase = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      alert("Form submitted successfully!");
-      navigate("/home");
+      const data = new FormData();
+      Object.keys(formData).forEach((key) => {
+        data.append(key, formData[key]);
+      });
+      axios.post("http://localhost:4000/report", data, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then(() => {
+        navigate("/homepage");
+      });
     }
   };
 
@@ -83,7 +93,7 @@ const Reportcase = () => {
               <select name="children" value={formData.children} onChange={handleChange}>
                 <option value="">Select</option>
                 {[...Array(10).keys()].map((num) => (
-                  <option key={num} value={num}>
+                  <option key={num} value={num.toString()}>
                     {num}
                   </option>
                 ))}
@@ -144,8 +154,8 @@ const Reportcase = () => {
         <div className="form-group">
           <label>Sufficient Food?</label>
           <div className="radio-group">
-          <input type="radio" name="healthIssues" value="yes" checked={formData.healthIssues === "yes"} onChange={handleChange} /> Yes
-          <input type="radio" name="healthIssues" value="no" checked={formData.healthIssues === "no"} onChange={handleChange} /> No
+          <input type="radio" name="sufficientFood" value="yes" checked={formData.sufficientFood === "yes"} onChange={handleChange} /> Yes
+          <input type="radio" name="sufficientFood" value="no" checked={formData.sufficientFood === "no"} onChange={handleChange} /> No
           </div>
         </div>
 

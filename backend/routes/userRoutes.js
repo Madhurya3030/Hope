@@ -20,7 +20,7 @@ router.post("/registration1", async (req, res) => {
     if (existingUsername) {
       return res.status(400).json({ error: "Username already taken. Choose another." });
     }
-
+ 
     // Validate password matching
     if (password !== confirmPassword) {
       return res.status(400).json({ error: "Passwords do not match." });
