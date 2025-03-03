@@ -13,7 +13,7 @@ function RegisterStep1() {
     phone: "", 
     otp: "",
     location: "",
-    username: "",
+    username: "", 
     password: "",
     confirmPassword: ""
   });
