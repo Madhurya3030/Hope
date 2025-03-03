@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect  } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Reportcase.css";
 import axios from "axios";
@@ -31,6 +31,51 @@ const Reportcase = () => {
       [name]: type === "checkbox" ? checked : value,
     });
   };
+
+
+   useEffect(() => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          async (position) => {
+            const { latitude, longitude } = position.coords;
+            try {
+              const response = await fetch(
+                `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&accept-language=en`
+              );
+              const data = await response.json();
+              if (data.address) {
+                const locationName = data.address.city || data.address.town || data.address.village || "Unknown Location";
+                setFormData((prevData) => ({
+                  ...prevData,
+                  location: locationName,
+                }));
+              }
+            } catch (error) {
+              console.error("Error fetching location:", error);
+              setFormData((prevData) => ({
+                ...prevData,
+                location: "Location not found",
+              }));
+            }
+          },
+          (error) => {
+            console.error("Error getting location:", error);
+            setFormData((prevData) => ({
+              ...prevData,
+              location: "Location access denied",
+            }));
+          },
+          { enableHighAccuracy: true }
+        );
+      } else {
+        setFormData((prevData) => ({
+          ...prevData,
+          location: "Geolocation not supported",
+        }));
+      }
+    }, []);
+    
+
 
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
@@ -141,9 +186,9 @@ const Reportcase = () => {
 
         <div className="form-group">
           <label>Location:</label>
-          <input type="text" name="location" value={formData.location} onChange={handleChange} />
+          <input type="text" name="location" value={formData.location} readOnly />
           {errors.location && <p className="error-text">{errors.location}</p>}
-        </div>
+        </div> 
 
         <div className="form-group">
           <label>Earnings:</label>
