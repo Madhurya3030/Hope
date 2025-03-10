@@ -1,0 +1,62 @@
+.partners-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .partners-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .partners-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Ensure full width */
+  }
+  
+  .partners-track {
+    display: flex;
+    gap: 8px;
+    width: max-content; /* Ensure it stretches to fit all cards */
+    animation: scroll 20s  infinite alternate ;
+    animation-direction: alternate-reverse;
+  }
+  
+  .partner-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .partner-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .partner-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .partner-name {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* Scroll halfway, to create a loop effect */
+    }
+  }
+  
