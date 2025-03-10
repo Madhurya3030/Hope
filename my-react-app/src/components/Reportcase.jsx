@@ -33,48 +33,54 @@ const Reportcase = () => {
   };
 
 
-   useEffect(() => {
-      if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(
-          async (position) => {
-            const { latitude, longitude } = position.coords;
-            try {
-              const response = await fetch(
-                `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&accept-language=en`
-              );
-              const data = await response.json();
-              if (data.address) {
-                const locationName = data.address.city || data.address.town || data.address.village || "Unknown Location";
-                setFormData((prevData) => ({
-                  ...prevData,
-                  location: locationName,
-                }));
-              }
-            } catch (error) {
-              console.error("Error fetching location:", error);
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            const response = await fetch(
+              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&accept-language=en`
+            );
+            const data = await response.json();
+  
+            if (data.address) {
+              // Prioritize town first, then other locations
+              const locationName = data.address.town || 
+                                   data.address.village || 
+                                   data.address.city || 
+                                   "Unknown Location";
+  
               setFormData((prevData) => ({
                 ...prevData,
-                location: "Location not found",
+                location: locationName,
               }));
             }
-          },
-          (error) => {
-            console.error("Error getting location:", error);
+          } catch (error) {
+            console.error("Error fetching location:", error);
             setFormData((prevData) => ({
               ...prevData,
-              location: "Location access denied",
+              location: "Location not found",
             }));
-          },
-          { enableHighAccuracy: true }
-        );
-      } else {
-        setFormData((prevData) => ({
-          ...prevData,
-          location: "Geolocation not supported",
-        }));
-      }
-    }, []);
-    
+          }
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+          setFormData((prevData) => ({
+            ...prevData,
+            location: "Location access denied",
+          }));
+        },
+        { enableHighAccuracy: true }
+      );
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        location: "Geolocation not supported",
+      }));
+    }
+  }, []);
+  
 
 
   const handlePhotoChange = (e) => {

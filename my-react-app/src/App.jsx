@@ -9,6 +9,9 @@ import RegisterStep1 from "./components/RegisterStep1";
 import Home from "./components/Home";
 import Reportcase from "./components/Reportcase.jsx";
 import Login from "./components/Login.jsx";
+import Aboutus from "./components/aboutus.jsx";
+import Stories from "./components/stories.jsx";
+
 function App() {
   return (
     <Router>
@@ -20,9 +23,12 @@ function App() {
             <>
               <Header />
               <Carousel />
+              <Aboutus />
               <Features />
               <Causes />
+              <Stories />
               <Footer />
+
             </>
           } 
         />
@@ -39,3 +45,4 @@ function App() {
 }
 
 export default App;
+ 
