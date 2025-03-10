@@ -1,62 +1,55 @@
 .stories-section {
+    padding: 40px 20px;
     background-color: #f9f9f9;
-    padding: 4rem 2rem;
     text-align: center;
-}
-
-.stories-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 2rem;
-}
-
-.stories-heading {
-    font-size: 2.5rem;
-    color: #1e3a8a;
-    margin-bottom: 1.5rem;
-}
-
-.carousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.carousel-button {
-    background-color: #3b82f6;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 50%;
-    cursor: pointer;
+  }
+  
+  .stories-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .story-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .story-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .story-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .story-text h3 {
     font-size: 1.5rem;
-    transition: background-color 0.3s ease-in-out;
-}
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .story-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
 
-.carousel-button:hover {
-    background-color: #2563eb;
-}
-
-.story-content {
-    flex: 1;
-    background-color: #e3f2fd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.story-content h3 {
-    color: #1e3a8a;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.story-content p {
-    color: #4b5563;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+img {
+    width : 200px;
+    height: 320px;
 }

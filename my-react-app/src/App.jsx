@@ -11,6 +11,7 @@ import Reportcase from "./components/Reportcase.jsx";
 import Login from "./components/Login.jsx";
 import Aboutus from "./components/aboutus.jsx";
 import Stories from "./components/stories.jsx";
+import Partner from "./components/Partner.jsx";
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
               <Carousel />
               <Aboutus />
               <Features />
-              <Causes />
               <Stories />
+              <Causes />
+              <Partner />
               <Footer />
 
             </>

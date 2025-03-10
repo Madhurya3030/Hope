@@ -3,7 +3,7 @@ import React from 'react';
 const aboutus = () => {
   const sectionStyle = {
     backgroundColor: '#f9f9f9',
-    padding: '4rem 2rem',
+    padding: '0.5rem 1rem',
     textAlign: 'center'
   };
 
@@ -26,32 +26,16 @@ const aboutus = () => {
     marginBottom: '1rem'
   };
 
-  const buttonStyle = {
-    backgroundColor: '#3b82f6',
-    color: '#fff',
-    padding: '0.5rem 1.5rem',
-    borderRadius: '1.5rem',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    border: 'none',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease-in-out'
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: '#2563eb'
-  };
 
   return (
     <section id="about" style={sectionStyle}>
       <div style={containerStyle}>
         <h2 style={headingStyle}>About Us</h2>
         <p style={textStyle}>
-          Welcome to our platform! We are dedicated to providing the best services
-          with a focus on customer satisfaction, innovation, and excellence.
+        At HopeBridge, we are dedicated to making a meaningful impact in the lives of those in need. Our platform is built on the belief that every individual deserves a helping hand and a chance for a better life.
         </p>
         <p style={textStyle}>
-          Our team of experts continuously strives to improve and deliver solutions
-          that empower businesses and individuals alike.
+        Our mission is to bridge the gap between those who want to help and those who need help the most. By creating a simple and reliable platform, we empower citizens to connect with and support people facing poverty, ensuring that help reaches those who need it most.
         </p>
         <div style={{ marginTop: '1.5rem' }}>
         </div>

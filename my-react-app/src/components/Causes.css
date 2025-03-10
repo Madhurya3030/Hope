@@ -59,3 +59,8 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+  img {
+    width : 200px;
+    height: 320px;
+  }
