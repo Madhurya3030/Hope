@@ -4,23 +4,23 @@ import './Features.css';
 function Features() {
   return (
     <section className="features">
-      <h2>Why Donate Through Us?</h2>
+      <h2>How It Works</h2>
       <div className="feature-cards">
         <div className="card">
-          <h3>Trust & Transparency</h3>
-          <p>100% of your donation reaches the cause.</p>
+          <h3>Step 1</h3> 
+          <p>Register as a Citixen with true identity.</p>
         </div>
         <div className="card">
-          <h3>Tax Benefits</h3>
-          <p>Get tax exemptions under 80G.</p>
+          <h3>Step 2</h3>
+          <p>Find people in poverty.</p>
         </div>
         <div className="card">
-          <h3>Verified NGOs</h3>
-          <p>We partner with trusted NGOs across the country.</p>
+          <h3>Step 3</h3>
+          <p>Help then by giving their details in the form.</p>
         </div>
         <div className="card">
-          <h3>Impact Stories</h3>
-          <p>See how your donations are changing lives.</p>
+          <h3>Step 4</h3>
+          <p>HopeBridge connects with the poverty people.</p>
         </div>
       </div>
     </section>

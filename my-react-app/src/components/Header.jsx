@@ -18,7 +18,7 @@ function Header() {
         <button className="Register" onClick={() => navigate('/registration1')}>Register</button>
         </div>
         
-      </nav>
+      </nav> 
     </header> 
   );
 }
