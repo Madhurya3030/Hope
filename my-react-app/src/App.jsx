@@ -12,6 +12,8 @@ import Login from "./components/Login.jsx";
 import Aboutus from "./components/aboutus.jsx";
 import Stories from "./components/stories.jsx";
 import Partner from "./components/Partner.jsx";
+import Admin from "./components/Adminpage.jsx";
+
 
 function App() {
   return (
@@ -39,10 +41,11 @@ function App() {
         <Route path="/registration1" element={<RegisterStep1 />} />
         <Route path="/homepage" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/report" element={<Reportcase />}
-         />
+        <Route path="/report" element={<Reportcase />}/>
+        <Route path="/admin@tpg" element={<Admin />}/>
       </Routes>
     </Router>
+    
   );
 }
 

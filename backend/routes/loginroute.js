@@ -5,14 +5,13 @@ const User = require("../models/user");
 
 
 const router = express.Router();
-
-// Configure session middleware
+ 
 router.use(
   session({
-    secret: "mysecretkey", // Change this in production
+    secret: "mysecretkey", 
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, // Set to true if using HTTPS
+    cookie: { secure: false }, 
   })
 );
 
@@ -20,7 +19,7 @@ router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // 1️⃣ Check if the user exists
+
     const user = await User.findOne({ username });
 
     if (!user) {
@@ -37,7 +36,10 @@ router.post("/login", async (req, res) => {
     // 3️⃣ Store user session data
     req.session.user = { id: user._id, username: user.username };
 
-    res.json({ message: "Login successful" });
+    res.json({ 
+      message: "Login successful", 
+    });
+    
   } catch (error) {
     console.error("Login Error:", error);
     res.status(500).json({ message: "Server error. Please try again later." });
