@@ -15,7 +15,7 @@ const Reportcase = () => {
     address: "",
     location: "",
     earnings: "",
-    sufficientFood: false,
+    sufficientFood: "",
     needHelp: "",
     photo: null,
   });
@@ -31,8 +31,9 @@ const Reportcase = () => {
       [name]: type === "checkbox" ? checked : value,
     });
   };
+  
 
-
+ 
   useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -45,7 +46,6 @@ const Reportcase = () => {
             const data = await response.json();
   
             if (data.address) {
-              // Prioritize town first, then other locations
               const locationName = data.address.town || 
                                    data.address.village || 
                                    data.address.city || 
@@ -118,6 +118,7 @@ const Reportcase = () => {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then(() => {
+        alert("Thank You for being part.")
         navigate("/homepage");
       });
     }
@@ -207,6 +208,7 @@ const Reportcase = () => {
           <div className="radio-group">
           <input type="radio" name="sufficientFood" value="yes" checked={formData.sufficientFood === "yes"} onChange={handleChange} /> Yes
           <input type="radio" name="sufficientFood" value="no" checked={formData.sufficientFood === "no"} onChange={handleChange} /> No
+
           </div>
         </div>
 

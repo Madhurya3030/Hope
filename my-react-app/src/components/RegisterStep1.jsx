@@ -79,10 +79,10 @@ function RegisterStep1() {
             otp: formData.otp,
         });
 
-        alert("✅ OTP verified successfully!");
+        alert(" OTP verified successfully!");
         console.log("OTP Verification Response:", response.data);
     } catch (error) {
-        console.error("❌ OTP verification failed:", error);
+        console.error(" OTP verification failed:", error);
 
         if (error.response) {
             console.log("📌 Response Data:", error.response.data);
@@ -100,7 +100,7 @@ const handleSubmit = (e) => {
     console.log("Sending data:", formData); // Log the data being sent
     axios.post("http://localhost:4000/registration1", formData)
       .then(() => {
-        navigate("/homepage");
+        navigate("/report");
       })
       .catch((err) => {
         console.error("Registration failed:", err.response?.data || err.message);
