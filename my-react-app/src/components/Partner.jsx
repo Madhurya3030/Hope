@@ -22,6 +22,7 @@ const Partners = () => {
                 src={partner.logo}
                 alt={partner.name}
                 className="partner-logo"
+                onError={(e) => e.target.src = 'fallback.png'} // Fallback image
               />
               <h3 className="partner-name">{partner.name}</h3>
             </div>

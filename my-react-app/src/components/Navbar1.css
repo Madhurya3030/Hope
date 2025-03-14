@@ -1,4 +1,4 @@
-/* Make the header full-width */
+
 .header {
     width: 1450px;
     display: flex;
@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     z-index: 1000; /* Ensures it stays on top */
-}
+} 
 
 /* Logo stays on the left */
 .logo {

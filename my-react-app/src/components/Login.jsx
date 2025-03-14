@@ -26,7 +26,7 @@ function Login() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e) => { 
     e.preventDefault();
 
     if (validate()) {
@@ -53,10 +53,10 @@ function Login() {
   };
 
   return (
-    <>
+    <div class = "loginform">
       <Navbar />
       <div className="login-container">
-        <h2>Login</h2>
+        <h2>LOGIN</h2>
         <form className="form" onSubmit={handleLogin}>
           <div className="form-group">
             <label>Username</label>
@@ -64,6 +64,7 @@ function Login() {
               type="text"
               name="username"
               value={formData.username}
+              placeholder="Enter the Username"
               onChange={handleChange}
             />
             {errors.username && <p className="error-text">{errors.username}</p>}
@@ -74,6 +75,7 @@ function Login() {
             <input
               type="password"
               name="password"
+              placeholder="Enter the Password"
               value={formData.password}
               onChange={handleChange}
             />
@@ -85,7 +87,7 @@ function Login() {
           </button>
         </form>   
       </div>
-    </>
+    </div>
   );
 }
 

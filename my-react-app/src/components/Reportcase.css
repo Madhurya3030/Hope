@@ -1,4 +1,4 @@
-/* Container */
+
 .register-container {
   max-width: 90%;
   width: 800px;
@@ -14,27 +14,25 @@
   text-align: center;
 }
 
-/* Heading */
 h2 {
   color: #222;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-/* Form */
+
 .form {
   width: 100%;
   max-width: 700px;
 }
 
-/* Form Groups */
 .form-group {
   width: 100%;
   margin-bottom: 18px;
   text-align: left;
 }
 
-/* Labels */
+
 label {
   display: block;
   font-weight: 600;
@@ -43,10 +41,10 @@ label {
   font-size: 17px;
 }
 
-/* Input Fields & Select Dropdown */
+
 input,
 select {
-  width: 100%;
+  width: 100%; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -61,7 +59,7 @@ select:focus {
   box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.2);
 }
 
-/* Radio Buttons */
+
 .radio-group {
   display: flex;
   align-items: center;
@@ -73,7 +71,7 @@ select:focus {
   margin-right: 5px;
 }
 
-/* Fixing Alignment of Labels */
+
 .radio-group label {
   font-size: 16px;
   display: flex;
@@ -88,7 +86,7 @@ select:focus {
   gap: 8px;
 }
 
-/* Ensure Checkbox and Label Align */
+
 .checkbox-group input {
   width: auto;
   margin: 0;
@@ -98,7 +96,7 @@ select:focus {
   font-size: 16px;
 }
 
-/* Submit Button */
+
 .submit-btn {
   width: 100%;
   padding: 12px;
@@ -117,14 +115,14 @@ select:focus {
   background-color: #218838;
 }
 
-/* Error Messages */
+
 .error-text {
   color: red;
   font-size: 13px;
   margin-top: 5px;
 }
 
-/* Image Preview */
+
 .preview-img {
   margin-top: 10px;
   max-width: 100%;
@@ -132,7 +130,7 @@ select:focus {
   border-radius: 6px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
   .register-container {
       width: 80%;

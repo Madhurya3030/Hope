@@ -1,9 +1,9 @@
 .header {
-    width: 100%; /* Changed to 100% for responsiveness */
+    width: 100%; 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Keeps logo left, nav center, button right */
-    padding: 20px 50px; /* Adds space on the sides */
+    justify-content: space-between; 
+    padding: 20px 50px; 
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed; 
@@ -13,20 +13,20 @@
     z-index: 1000; 
   }
   
- 
+  
   .logo {
     width: 70px; 
     height: auto; 
   }
   
-  /* Navigation stays in the center */
+
   .nav {
     display: flex;
-    gap: 30px; /* Adds space between menu items */
+    gap: 30px; 
     align-items: center;
   }
   
-  /* Style for nav links */
+ 
   .nav a {
     text-decoration: none;
     color: #333;
@@ -39,7 +39,7 @@
     color: #ff6b6b;
   }
   
-  /* Donate Button stays on the right */
+
   .donate-button {
     background-color: #ff6b6b;
     color: #fff;
@@ -56,19 +56,19 @@
     background-color: #e35b5b;
   }
   
-  /* Prevent body content from going under the fixed header */
+  
   body {
-    padding-top: 80px; /* Adjust depending on header height */
+    padding-top: 80px;
   }
   .button-container {
     display: flex;
-    gap: 15px; /* Adds space between buttons */
+    gap: 15px; 
   }
   .Login {
     background-color: white;
     color: #333;
     border: 2px solid #e35b5b;
-    padding: 8px 16px; /* consistent button padding */
+    padding: 8px 16px; 
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -80,11 +80,11 @@
     transform: scale(1.05);
   }
   
-  /* Signup Button */
+  
   .Register {
-    background-color: #e35b5b; /* Light green */
+    background-color: #e35b5b; 
     color: white;
-    padding: 8px 16px;/* consistent button padding */
+    padding: 8px 16px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -97,9 +97,9 @@
   }
 
   .logout-btn {
-    background-color: #e35b5b; /* Light green */
+    background-color: #e35b5b; 
     color: white;
-    padding: 8px 16px;/* consistent button padding */
+    padding: 8px 16px;
     border-radius: 5px;
     border: none;
     cursor: pointer;

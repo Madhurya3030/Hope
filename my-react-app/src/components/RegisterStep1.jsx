@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./Navbar";
-import "./RegisterStep1.css"; // Import CSS file
+import "./RegisterStep1.css"; 
 
 function RegisterStep1() {
   const [formData, setFormData] = useState({
@@ -97,7 +97,7 @@ function RegisterStep1() {
 const handleSubmit = (e) => {
   e.preventDefault();
   if (validate()) {
-    console.log("Sending data:", formData); // Log the data being sent
+    console.log("Sending data:", formData); 
     axios.post("http://localhost:4000/registration1", formData)
       .then(() => {
         navigate("/report");
@@ -112,75 +112,140 @@ const handleSubmit = (e) => {
     <>
       <Navbar />
       <div className="register-container">
-        <h2>Personal Details</h2>
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>First Name</label>
-            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
-            {errors.firstName && <p className="error-text">{errors.firstName}</p>}
-          </div>
+  <h2>REGISTER</h2>
+  <form className="form" onSubmit={handleSubmit}>
+    <div className="form-group">
+      <label>First Name</label>
+      <input 
+        type="text" 
+        name="firstName" 
+        value={formData.firstName} 
+        onChange={handleChange} 
+        placeholder="Enter your first name" 
+      />
+      {errors.firstName && <p className="error-text">{errors.firstName}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Last Name</label>
-            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
-            {errors.lastName && <p className="error-text">{errors.lastName}</p>}
-          </div>
+    <div className="form-group">
+      <label>Last Name</label>
+      <input 
+        type="text" 
+        name="lastName" 
+        value={formData.lastName} 
+        onChange={handleChange} 
+        placeholder="Enter your last name" 
+      />
+      {errors.lastName && <p className="error-text">{errors.lastName}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Date of Birth</label>
-            <input type="date" name="dob" value={formData.dob} onChange={handleChange} />
-            {errors.dob && <p className="error-text">{errors.dob}</p>}
-          </div>
+    <div className="form-group">
+      <label>Date of Birth</label>
+      <input 
+        type="date" 
+        name="dob" 
+        value={formData.dob} 
+        onChange={handleChange} 
+        placeholder="Select your date of birth" 
+      />
+      {errors.dob && <p className="error-text">{errors.dob}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Aadhar Number</label>
-            <input type="text" name="aadhar" value={formData.aadhar} onChange={handleChange} maxLength="12" />
-            {errors.aadhar && <p className="error-text">{errors.aadhar}</p>}
-          </div>
+    <div className="form-group">
+      <label>Aadhar Number</label>
+      <input 
+        type="text" 
+        name="aadhar" 
+        value={formData.aadhar} 
+        onChange={handleChange} 
+        maxLength="12" 
+        placeholder="Enter your 12-digit Aadhar number" 
+      />
+      {errors.aadhar && <p className="error-text">{errors.aadhar}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Phone Number</label>
-            <input type="text" name="phone" value={formData.phone} onChange={handleChange} maxLength="13" />
-            {errors.phone && <p className="error-text">{errors.phone}</p>}
+    <div className="form-group">
+      <label>Phone Number</label>
+      <input 
+        type="text" 
+        name="phone" 
+        value={formData.phone} 
+        onChange={handleChange} 
+        maxLength="13" 
+        placeholder="Enter your phone number" 
+      />
+      {errors.phone && <p className="error-text">{errors.phone}</p>}
 
-            <button type="button" className="otp-btn" onClick={sendOTP}>Send OTP</button>
-          </div>
+      <button type="button" className="otp-btn" onClick={sendOTP}>Send OTP</button>
+    </div>
 
-          <div className="form-group">
-            <label>OTP</label>
-            <input type="text" name="otp" value={formData.otp} onChange={handleChange} maxLength="6" disabled={!otpSent} />
-            {errors.otp && <p className="error-text">{errors.otp}</p>}
+    <div className="form-group">
+      <label>OTP</label>
+      <input 
+        type="text" 
+        name="otp" 
+        value={formData.otp} 
+        onChange={handleChange} 
+        maxLength="6" 
+        disabled={!otpSent} 
+        placeholder="Enter OTP" 
+      />
+      {errors.otp && <p className="error-text">{errors.otp}</p>}
 
-            <button type="button" className="otp-btn" onClick={verifyOtp}>Verify OTP</button>
-          </div>
+      <button type="button" className="otp-btn" onClick={verifyOtp}>Verify OTP</button>
+    </div>
 
-          <div className="form-group">
-            <label>Location</label>
-            <input type="text" name="location" value={formData.location} onChange={handleChange} />
-            {errors.location && <p className="error-text">{errors.location}</p>}
-          </div>
+    <div className="form-group">
+      <label>Location</label>
+      <input 
+        type="text" 
+        name="location" 
+        value={formData.location} 
+        onChange={handleChange} 
+        placeholder="Enter your location" 
+      />
+      {errors.location && <p className="error-text">{errors.location}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Username</label>
-            <input type="text" name="username" value={formData.username} onChange={handleChange} />
-            {errors.username && <p className="error-text">{errors.username}</p>}
-          </div>
+    <div className="form-group">
+      <label>Username</label>
+      <input 
+        type="text" 
+        name="username" 
+        value={formData.username} 
+        onChange={handleChange} 
+        placeholder="Choose a username" 
+      />
+      {errors.username && <p className="error-text">{errors.username}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Password</label>
-            <input type="password" name="password" value={formData.password} onChange={handleChange} />
-            {errors.password && <p className="error-text">{errors.password}</p>}
-          </div>
+    <div className="form-group">
+      <label>Password</label>
+      <input 
+        type="password" 
+        name="password" 
+        value={formData.password} 
+        onChange={handleChange} 
+        placeholder="Create a password" 
+      />
+      {errors.password && <p className="error-text">{errors.password}</p>}
+    </div>
 
-          <div className="form-group">
-            <label>Confirm Password</label>
-            <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
-            {errors.confirmPassword && <p className="error-text">{errors.confirmPassword}</p>}
-          </div>
+    <div className="form-group">
+      <label>Confirm Password</label>
+      <input 
+        type="password" 
+        name="confirmPassword" 
+        value={formData.confirmPassword} 
+        onChange={handleChange} 
+        placeholder="Confirm your password" 
+      />
+      {errors.confirmPassword && <p className="error-text">{errors.confirmPassword}</p>}
+    </div>
 
-          <button type="submit" className="submit-btn">Next</button>
-        </form>
-      </div>
+    <button type="submit" className="submit-btn">Submit</button>
+  </form>
+</div>
+
     </>
   );
 }

@@ -23,7 +23,7 @@ const Stories = () => {
   return (
     <section id="stories" className="stories-section">
       <div className="stories-container">
-        <h2 className="stories-heading">Our Stories</h2>
+        <h2 className="stories-heading">VOICES OF CHANGE</h2>
         <div className="stories-grid">
           {storiesData.map((story, index) => (
             <div key={index} className="story-card">

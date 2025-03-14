@@ -1,5 +1,5 @@
 .features {
-    padding: 50px 20px;
+    padding: 30px 20px;
     text-align: center;
   }
   
@@ -7,7 +7,7 @@
     font-size: 36px;
     margin-bottom: 40px;
   }
-  
+   
   .feature-cards {
     display: flex;
     justify-content: space-around;
