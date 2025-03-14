@@ -19,7 +19,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Home Page with Full Layout */}
         <Route 
           path="/" 
           element={
@@ -37,7 +36,6 @@ function App() {
           } 
         />
 
-        {/* Registration Steps - Without Other Components */}
         <Route path="/registration1" element={<RegisterStep1 />} />
         <Route path="/homepage" element={<Home />} />
         <Route path="/login" element={<Login />} />

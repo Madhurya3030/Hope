@@ -10,7 +10,7 @@ const images = [
   "3.png",
 ];
 
-const Carousel = () => {
+const Carousel = () => { 
   const settings = {
     dots: true, // Show dots navigation
     infinite: true, // Infinite loop scrolling

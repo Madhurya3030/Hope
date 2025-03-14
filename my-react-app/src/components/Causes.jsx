@@ -3,8 +3,8 @@ import './Causes.css';
 
 function Causes() {
   return (
-    <section className="causes">
-      <h2>Support A Cause</h2>
+    <section className="causes" id="causes">
+      <h2>SUPPORT A CAUSE</h2>
       <div className="cause-cards">
 
         <div className="cause-card">

@@ -3,10 +3,10 @@ import './Features.css';
 
 function Features() {
   return (
-    <section className="features">
-      <h2>How It Works</h2>
+    <section className="features" id = "how-it-works">
+      <h2>HOW IT WORKS</h2>
       <div className="feature-cards">
-        <div className="card">
+        <div className="card"> 
           <h3>Register as a Citizen</h3> 
           <p>Join our platform by registering with your true identity, becoming part of a growing network of compassionate individuals.</p>
         </div>

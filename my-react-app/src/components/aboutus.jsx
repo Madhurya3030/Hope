@@ -2,14 +2,17 @@ import React from 'react';
 
 const aboutus = () => {
   const sectionStyle = {
-    backgroundColor: '#f9f9f9',
-    padding: '0.5rem 1rem',
+    
+    padding: '5rem 1rem',
     textAlign: 'center'
   };
 
   const containerStyle = {
+    backgroundColor: '#f9f9f9',
+    padding: '20px 350px 30px 350px',
     maxWidth: '800px',
-    margin: '0 auto'
+    margin: '30px 20px 1px 20px',
+    textAlign: 'center'
   };
 
   const headingStyle = {
@@ -30,7 +33,7 @@ const aboutus = () => {
   return (
     <section id="about" style={sectionStyle}>
       <div style={containerStyle}>
-        <h2 style={headingStyle}>About Us</h2>
+        <h2 style={headingStyle}>ABOUT US</h2>
         <p style={textStyle}>
         At HopeBridge, we are dedicated to making a meaningful impact in the lives of those in need. Our platform is built on the belief that every individual deserves a helping hand and a chance for a better life.
         </p>
@@ -44,4 +47,4 @@ const aboutus = () => {
   );
 };
 
-export default aboutus;
+export default aboutus; 

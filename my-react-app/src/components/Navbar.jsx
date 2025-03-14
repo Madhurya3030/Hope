@@ -6,7 +6,7 @@ function Header() {
   const navigate = useNavigate();
   return (
     <header className="header">
-      <div className="logo">YourLogo</div>
+      <div className="logo"><img src="bg.png" alt="Logo" className="logo" /></div>
       <nav className="nav">
         <a href="/">Home</a>
         <a href="/about">About Us</a>
@@ -17,7 +17,7 @@ function Header() {
         
       </nav>
     </header> 
-  );
+  ); 
 }
 
 export default Header;

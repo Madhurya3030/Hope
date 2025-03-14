@@ -1,6 +1,6 @@
-
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
   const navigate = useNavigate();
@@ -13,15 +13,31 @@ function Header() {
     }
   };
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="header">
       <img src="bg.png" alt="Logo" className="logo" />
       <nav className="nav">
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/how-it-works">How It Works</a>
-        <a href="/stories">Stories</a>
-        <a href="/causes">Causes</a>
+        <a onClick={navigate("./")}>Home</a>
+
+        <a onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} style={{ cursor: 'pointer' }}>
+          About Us
+        </a>
+        <a onClick={(e) => { e.preventDefault(); scrollToSection('how-it-works'); }} style={{ cursor: 'pointer' }}>
+          How It Works
+        </a>
+        <a onClick={(e) => { e.preventDefault(); scrollToSection('stories'); }} style={{ cursor: 'pointer' }}>
+        Voices of Change
+        </a>
+        <a onClick={(e) => { e.preventDefault(); scrollToSection('causes'); }} style={{ cursor: 'pointer' }}>
+          Causes
+        </a>
         <button onClick={handleLogout} className="logout-btn">
               Logout
         </button>

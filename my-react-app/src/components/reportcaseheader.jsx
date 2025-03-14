@@ -12,7 +12,7 @@ function Header() {
       </div>
       <nav className="nav"> 
         <div className="button-container">
-              <button className="Login" onClick={() => navigate('/registration1')}>Registration</button>
+              <button className="Login" onClick={() => navigate('/')}>Logout</button>
         </div>
       </nav>
     </header> 

@@ -1,62 +1,116 @@
 .partners-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    overflow: hidden; /* Prevent overflow */
+  padding: 20px 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: hidden;
+  width : 1450px;
+}
+
+.partners-heading {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Slider container */
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Scrolling track */
+.partners-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+}
+
+/* Individual partner card */
+.partner-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100px;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Partner logo */
+.partner-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.1);
+}
+
+/* Partner name */
+.partner-name {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-  
-  .partners-heading {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+  to {
+    transform: translateX(calc(-50% - 10px));
   }
-  
-  .partners-slider {
-    overflow: hidden;
-    position: relative;
-    width: 100%; /* Ensure full width */
-  }
-  
-  .partners-track {
-    display: flex;
-    gap: 8px;
-    width: max-content; /* Ensure it stretches to fit all cards */
-    animation: scroll 20s  infinite alternate ;
-    animation-direction: alternate-reverse;
-  }
-  
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
   .partner-card {
-    background-color: #fff;
+    width: 120px;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
   }
-  
-  .partner-card:hover {
-    transform: scale(1.05);
-  }
-  
+
   .partner-logo {
     width: 80px;
     height: 80px;
-    object-fit: cover;
-    margin-bottom: 10px;
   }
-  
-  .partner-name {
-    font-size: 1rem;
-    color: #555;
+
+  .partners-heading {
+    font-size: 2rem;
   }
-  
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%); /* Scroll halfway, to create a loop effect */
-    }
+}
+
+@media (max-width: 480px) {
+  .partner-card {
+    width: 100px;
   }
-  
+
+  .partner-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .partners-heading {
+    font-size: 1.5rem;
+  }
+}
