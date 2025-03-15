@@ -13,6 +13,7 @@ import Aboutus from "./components/aboutus.jsx";
 import Stories from "./components/stories.jsx";
 import Partner from "./components/Partner.jsx";
 import Admin from "./components/Adminpage.jsx";
+import Chatbot from "./components/Chatbot";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/report" element={<Reportcase />}/>
         <Route path="/admin@tpg" element={<Admin />}/>
+        <Route path="/chat" element={<Chatbot />} />
       </Routes>
     </Router>
     

@@ -1,26 +1,25 @@
-/* Make the header full-width */
 .header {
     width: 1450px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Keeps logo left, nav center, button right */
-    padding: 20px 50px; /* Adds space on the sides */
+    justify-content: space-between; 
+    padding: 20px 50px; 
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Keeps the header fixed at the top */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 1000; 
 }
 
-/* Logo stays on the left */
-.logo {
+
+.logo { 
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Navigation stays in the center */
+
 .nav {
     display: flex;
     gap: 30px; /* Adds space between menu items */
